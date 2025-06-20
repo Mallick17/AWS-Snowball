@@ -263,10 +263,9 @@ These features make Snowball Edge a mini AWS cloud for disconnected environments
 
 AWS Snowball is a versatile solution for transferring large data volumes and enabling edge computing in challenging environments. Its secure, rugged devices and integration with AWS services make it ideal for data migration, remote data collection, and local processing. By understanding its features, limitations, and best practices, organizations can leverage Snowball to streamline their cloud data strategies effectively.
 
-<details>
-  <summary>Simplified & Detailed explaination of AWS Snowball Edge</summary>
+---
 
-### AWS Snowball Edge
+# AWS Snowball Edge
 
 - **AWS Snowball Edge** is a physical device sent by Amazon to process and store data in places with little or no internet, like oil rigs or remote sites.
 - It’s likely used for **local computing tasks** (e.g., analyzing sensor data) and transferring large data to AWS, not just data transfer.
@@ -288,11 +287,7 @@ It’s unlikely Snowball Edge can run complex AI models like ChatGPT, which need
 
 ---
 
-### Detailed Explanation of AWS Snowball Edge
-
-AWS Snowball Edge is a versatile solution for edge computing and data transfer, particularly in environments where internet connectivity is limited or unreliable. This section provides an in-depth explanation, addressing its functionality, use cases, setup process, comparisons with other AWS services, and a specific focus on compute-optimized scenarios. I’ll also include a textual architecture diagram, detailed comparisons, setup instructions, and a comparison chart to ensure a comprehensive understanding.
-
-#### Overview of AWS Snowball Edge
+## Overview of AWS Snowball Edge
 AWS Snowball Edge is a physical device provided by Amazon Web Services (AWS) that combines on-board storage and compute power to deliver AWS capabilities in disconnected or harsh environments. It is part of the AWS Snow Family, designed to address challenges like high network costs, long transfer times, and security concerns in data migration and edge computing. As of 2025, AWS offers two main configurations ([AWS Snowball Features](https://aws.amazon.com/snowball/features/)):
 - **Storage-Optimized (210 TB)**: Primarily for transferring large datasets to or from AWS.
 - **Compute-Optimized**: Equipped with powerful CPUs and optional GPUs for local processing tasks, such as machine learning inference, video analytics, or running containerized applications.
@@ -304,12 +299,12 @@ Key features include:
 - **Security**: Data is encrypted with 256-bit encryption using AWS Key Management Service (KMS), and devices feature tamper-evident designs and Trusted Platform Modules (TPM) ([What is AWS Snowball?](https://www.nops.io/glossary/what-is-aws-snowball/)).
 - **Offline Operation**: Can process and store data without internet connectivity, syncing with AWS when possible or via physical shipment.
 
-#### Physical Presence and Delivery
+## Physical Presence and Delivery
 Snowball Edge is a **physical device** shipped by AWS to your specified location, such as an oil rig, factory, or research facility. It is not typically used in homes unless for specialized projects requiring massive data processing or no internet. The device, roughly the size of a small suitcase, is ruggedized to withstand harsh environments. AWS handles delivery through regional carriers, and the device includes an E Ink shipping label for easy return ([What is Snowball Edge?](https://docs.aws.amazon.com/snowball/latest/developer-guide/whatisedge.html)).
 
 Once received, you connect it to your local network, allowing it to interact with devices like sensors or cameras. It processes data locally, stores results, and can either sync data to AWS when internet is available or be shipped back for AWS to upload the data to services like Amazon S3. This makes it ideal for scenarios where real-time processing is needed without cloud dependency.
 
-#### Compute-Optimized Use Cases
+### Compute-Optimized Use Cases
 The Compute-Optimized Snowball Edge is designed for running compute-intensive workloads locally, particularly in environments with limited connectivity. It is not solely for data transfer but excels in scenarios requiring immediate data processing. Examples include:
 - **Industrial IoT (e.g., Oil Rigs)**: Analyzing sensor data for predictive maintenance or equipment monitoring.
 - **Autonomous Vehicles**: Running machine learning models for real-time obstacle detection.
@@ -383,6 +378,8 @@ Snowball Edge is one of several AWS edge computing solutions. Below, I compare i
 - **Snowball Edge vs. Greengrass**: Greengrass is for lightweight IoT tasks on existing hardware, while Snowball Edge provides more compute and storage for complex workloads ([AWS Snowball Edge Cheat Sheet](https://tutorialsdojo.com/aws-snowball-edge/)).
 
 #### Setting Up Snowball Edge for an Oil Rig
+<details>
+  <summary>Click to view Setting Up AWS Snowball Edge for an Oil Rig</summary>
 
 # Setting Up AWS Snowball Edge for an Oil Rig
 
@@ -434,12 +431,13 @@ Snowball Edge is one of several AWS edge computing solutions. Below, I compare i
 - Ensure compliance with data residency regulations.
 - Regularly monitor device status using AWS OpsHub.
 
+</details>
 
 #### Comparison Chart: Snowball Edge vs. EC2/RDS
 | **Scenario**              | **Snowball Edge**                          | **EC2/RDS**                                |
 |---------------------------|--------------------------------------------|--------------------------------------------|
 | **Internet Connectivity** | Works offline                              | Requires reliable internet                 |
-| **Location**              | Remote/harsh environments (e.g., oil rigs)  | Cloud data centers                         |
+| **Location**              | Remote/harsh environments (e.g., oil rigs, Ship, Antartica Research Center)  | Cloud data centers                         |
 | **Use Case**              | Edge computing, data transfer              | Web apps, databases, general compute       |
 | **Latency**               | Low for local processing                   | Higher due to network distance             |
 | **Cost**                  | Upfront device fee + usage ([AWS Snowball Pricing](https://aws.amazon.com/snowball/pricing/)) | Pay-as-you-go                              |
@@ -454,7 +452,7 @@ Snowball Edge is not designed to run large-scale AI models like ChatGPT or Grok,
 
 For example, on an oil rig, it could run a model to detect equipment failures but not a conversational AI like Grok ([AWS Snowball Features](https://aws.amazon.com/snowball/features/)).
 
-#### Key Benefits of Snowball Edge
+## Key Benefits of Snowball Edge
 - **Offline Processing**: Enables real-time analytics in disconnected environments.
 - **Portability**: Can be deployed anywhere, unlike fixed solutions like Outposts.
 - **Security**: Meets military and industrial standards for data protection.
@@ -469,6 +467,20 @@ For example, on an oil rig, it could run a model to detect equipment failures bu
 AWS Snowball Edge is a powerful solution for edge computing and data transfer in remote or disconnected environments. Its Compute-Optimized configuration excels in scenarios requiring local processing, such as oil rigs, autonomous vehicles, or military operations. By providing AWS capabilities offline, it addresses limitations of cloud services like EC2 and RDS, making it a critical tool for industries operating in challenging conditions.
 
 **Key Citations**:
+
+<details>
+  <summary>Click to view the reffered Articles</summary>
+
+- [AWS Snowball Secure Edge Computing Overview](https://aws.amazon.com/snowball/)
+- [AWS Snowball Key Features and Use Cases](https://www.nops.io/glossary/what-is-aws-snowball/)
+- [Amazon Snowball Service Details](https://www.ktexperts.com/amazon-snowball-in-aws/)
+- [AWS Snowball Data Transfer Process](https://medium.com/@servifyspheresolutions/what-is-aws-snowball-41e72a6823f9)
+- [AWS Snowball Efficient Data Management](https://ijonaservices.com/aws-snowball-unlocking-efficient-data-management-and-transfer/)
+- [AWS Snowball Edge Cloud in Disconnected Environments](https://ctovision.com/a-new-aws-snowball-edge-provides-the-power-of-the-cloud-in-disconnected-environments/)
+- [AWS Snow Family Overview](https://www.w3schools.com/aws/aws_cloudessentials_mig_awssnowfamily.php)
+- [AWS Snowball Use Cases and Limitations](https://www.resilio.com/blog/aws-snowball-and-alternatives)
+- [AWS Snowball vs. Snowcone Comparison](https://www.resilio.com/blog/aws-snowball-vs-snowcone)
+- [AWS Snowball Edge User Experience](https://www.lastweekinaws.com/blog/amazons-snowball-edge-frustrates-this-user/)
 - [AWS Snowball Edge Developer Guide Introduction](https://docs.aws.amazon.com/snowball/latest/developer-guide/whatisedge.html)
 - [AWS Snowball Secure Edge Computing Overview](https://aws.amazon.com/snowball/)
 - [AWS Snowball Features and Configurations](https://aws.amazon.com/snowball/features/)
@@ -482,17 +494,5 @@ AWS Snowball Edge is a powerful solution for edge computing and data transfer in
 - [AWS Snowball Edge for Telecom Use Cases](https://docs.aws.amazon.com/whitepapers/latest/ec2-networking-for-telecom/snowball.html)
 - [AWS Snowball Edge Workflow Guide](https://docs.aws.amazon.com/snowball/latest/developer-guide/how-it-works.html)
 - [AWS Snowball Edge Getting Started Guide](https://docs.aws.amazon.com/snowball/latest/developer-guide/getting-started.html)
-
+  
 </details>
-
-**Key Citations**:
-- [AWS Snowball Secure Edge Computing Overview](https://aws.amazon.com/snowball/)
-- [AWS Snowball Key Features and Use Cases](https://www.nops.io/glossary/what-is-aws-snowball/)
-- [Amazon Snowball Service Details](https://www.ktexperts.com/amazon-snowball-in-aws/)
-- [AWS Snowball Data Transfer Process](https://medium.com/@servifyspheresolutions/what-is-aws-snowball-41e72a6823f9)
-- [AWS Snowball Efficient Data Management](https://ijonaservices.com/aws-snowball-unlocking-efficient-data-management-and-transfer/)
-- [AWS Snowball Edge Cloud in Disconnected Environments](https://ctovision.com/a-new-aws-snowball-edge-provides-the-power-of-the-cloud-in-disconnected-environments/)
-- [AWS Snow Family Overview](https://www.w3schools.com/aws/aws_cloudessentials_mig_awssnowfamily.php)
-- [AWS Snowball Use Cases and Limitations](https://www.resilio.com/blog/aws-snowball-and-alternatives)
-- [AWS Snowball vs. Snowcone Comparison](https://www.resilio.com/blog/aws-snowball-vs-snowcone)
-- [AWS Snowball Edge User Experience](https://www.lastweekinaws.com/blog/amazons-snowball-edge-frustrates-this-user/)
