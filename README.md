@@ -1,5 +1,9 @@
 # AWS-Snowball
-### AWS Snowball Edge: Simplified Explanation
+
+<details>
+  <summary>Simplified & Detailed explaination of AWS Snowball Edge</summary>
+
+### AWS Snowball Edge
 
 - **AWS Snowball Edge** is a physical device sent by Amazon to process and store data in places with little or no internet, like oil rigs or remote sites.
 - It’s likely used for **local computing tasks** (e.g., analyzing sensor data) and transferring large data to AWS, not just data transfer.
@@ -215,3 +219,5 @@ AWS Snowball Edge is a powerful solution for edge computing and data transfer in
 - [AWS Snowball Edge for Telecom Use Cases](https://docs.aws.amazon.com/whitepapers/latest/ec2-networking-for-telecom/snowball.html)
 - [AWS Snowball Edge Workflow Guide](https://docs.aws.amazon.com/snowball/latest/developer-guide/how-it-works.html)
 - [AWS Snowball Edge Getting Started Guide](https://docs.aws.amazon.com/snowball/latest/developer-guide/getting-started.html)
+
+</details>
