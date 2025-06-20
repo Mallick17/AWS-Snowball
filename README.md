@@ -144,6 +144,8 @@ AWS Snowball devices vary in storage and compute capabilities, catering to diffe
 | **Snowcone** | Up to 8 TB | Lightweight compute | Small data transfers, IoT tasks |
 | **Snowmobile** | Up to 100 PB | None; data transfer only | Massive data center migrations |
 
+![image](https://github.com/user-attachments/assets/4d01067f-99f6-4757-9c4c-d2e4f1bacf60)
+
 - **Snowball (Classic)**: Ideal for one-time or recurring data migrations where only transfer is needed ([AWS Snowball Basics](https://www.ktexperts.com/amazon-snowball-in-aws/)).
 - **Snowball Edge Storage Optimized**: Best for transferring massive datasets, such as factory production logs ([AWS Snowball Edge Storage](https://aws.amazon.com/blogs/aws/new-snowball-edge-storage-optimized-devices-with-more-storage-and-bandwidth/)).
 - **Snowball Edge Compute Optimized**: Suited for local processing, like running ML models in disconnected environments ([AWS Snowball Edge Compute](https://ctovision.com/a-new-aws-snowball-edge-provides-the-power-of-the-cloud-in-disconnected-environments/)).
