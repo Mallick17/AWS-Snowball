@@ -152,6 +152,8 @@ AWS Snowball devices vary in storage and compute capabilities, catering to diffe
 - **Snowcone**: For small-scale transfers in remote areas ([AWS Snowball vs. Snowcone](https://www.resilio.com/blog/aws-snowball-vs-snowcone)).
 - **Snowmobile**: For extremely large data migrations, rarely used due to scale.
 
+![image](https://github.com/user-attachments/assets/b3811ad9-dd2f-4d7e-b90d-5c1e7d2b7154)
+
 ## 4. Security Features of AWS Snowball
 
 AWS Snowball prioritizes data security throughout the transfer process:
