@@ -216,10 +216,8 @@ To ensure accuracy, I reviewed the latest AWS Snowball pricing information, focu
   |                                     | OUT of Amazon S3           | Priced by region, e.g., Asia Pacific (Seoul) example: $0.05/GB for 125TB = $6,400 | Varies by region, see [AWS S3 Pricing](https://aws.amazon.com/s3/pricing/) |
   | Shipping                            |                              | Based on standard carrier rates, in-country for on-demand, included in 1-year upfront fee | Varies by location and option (e.g., 2-day, overnight), see [Snowball Shipping Guide](https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snowcone-shipping.html) |
 
-#### Combined Way of Data
-Given the user's request for a "combine way of data," I interpret this as providing an updated, unified view of pricing, incorporating current information and correcting outdated details. Below is a combined pricing table and updated examples:
 
-**Combined Pricing Table (Current as of June 28, 2025)**:
+### **Combined Pricing Table (Current as of June 28, 2025)**:
 
 | **Device/Service**                  | **On-Demand Pricing**                              | **Monthly Pricing** | **1-Year Upfront Pricing** | **Data Transfer IN** | **Data Transfer OUT** |
 |-------------------------------------|---------------------------------------------------|---------------------|----------------------------|----------------------|-----------------------|
