@@ -193,33 +193,58 @@ AWS Snowball excels in various scenarios, from small to large-scale data transfe
   - A bank exports 30 TB of transaction records for regulatory audits. Snowball ensures secure transfer to an external party via AWS S3.
 
 ## 6. Pricing and Costs
+### Verification with Current AWS Documentation
+To ensure accuracy, I reviewed the latest AWS Snowball pricing information, focusing on the official AWS website and related resources. Key findings include:
 
-AWS Snowball pricing depends on device type, data volume, and compute usage ([AWS Snowball Pricing](https://aws.amazon.com/snowball/pricing/)):
+- **Discontinuation Notice**: As of November 12, 2024, AWS discontinued previous generation devices, including Snowball Classic, Snowball Edge Storage Optimized 80TB, and Snowcone (HDD and SSD), with support for existing customers until November 12, 2025. New orders are for the latest generation devices: Snowball Edge Storage Optimized 210TB and Snowball Edge Compute Optimized with EC2.
 
-- **Snowball (Classic)**:
-  - Device Cost: ~$2,500 per device.
-  - Data Transfer: $0.01/GB (import), $0.02/GB (export).
-- **Snowball Edge Storage Optimized**:
-  - Device Cost: ~$4,000 per device.
-  - Data Transfer: Similar to Snowball Classic.
-- **Snowball Edge Compute Optimized**:
-  - Device Cost: Includes device fee plus compute/storage usage (EC2-like pricing).
-- **Snowcone**:
-  - Device Cost: ~$1,500 per device.
-- **Snowmobile**:
-  - Custom pricing based on data volume.
+- **Current Pricing (as of June 2025)**:
+  The following table summarizes the pricing from the AWS Snowball pricing page:
+
+  | **Device Type**                     | **Pricing Type**               | **Details**                                                                 | **Price/Fees**                                                                 |
+  |-------------------------------------|-------------------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------------|
+  | Snowball Edge Storage Optimized 210TB | On-Demand Job Fee          | Up to 100TB, includes 15 days                                           | $1,800                                                                    |
+  |                                     |                              | 101TB to 210TB, includes 15 days                                        | $3,200                                                                    |
+  |                                     | On-Demand Per Day Fee      | Beyond 15 days of use                                                   | $250 per day                                                              |
+  |                                     | Monthly Fee                |                                                                         | $9,885 per month                                                          |
+  |                                     | 1 Year Commitment Upfront Fee |                                                                         | $97,268 per year, includes shipping charges, option to renew in 1-year increments, Device Cycling fee may apply for replacements |
+  | Snowball Edge Compute Optimized with EC2 | Monthly Pricing           | Up to 104 vCPUs, 416 GB RAM                                             | $5,038 per month                                                          |
+  |                                     | 1 Year Commit Upfront Pricing | Up to 104 vCPUs, 416 GB RAM                                             | $37,960 per year                                                          |
+  | Amazon S3 compatible storage on Snowball | Monthly Fee               | Per GB, for Snowball Edge Compute optimized devices                      | $0.01 per GB per month                                                    |
+  |                                     | 1 Year Commitment Upfront Fee | Per GB, for Snowball Edge Compute optimized devices                      | $0.12 per GB per year                                                     |
+  | Data Transfer                       | IN to Amazon S3            | Except for small files (≤1MB), contact sales for evaluation             | $0.00 per GB                                                              |
+  |                                     | OUT of Amazon S3           | Priced by region, e.g., Asia Pacific (Seoul) example: $0.05/GB for 125TB = $6,400 | Varies by region, see [AWS S3 Pricing](https://aws.amazon.com/s3/pricing/) |
+  | Shipping                            |                              | Based on standard carrier rates, in-country for on-demand, included in 1-year upfront fee | Varies by location and option (e.g., 2-day, overnight), see [Snowball Shipping Guide](https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snowcone-shipping.html) |
+
+#### Combined Way of Data
+Given the user's request for a "combine way of data," I interpret this as providing an updated, unified view of pricing, incorporating current information and correcting outdated details. Below is a combined pricing table and updated examples:
+
+**Combined Pricing Table (Current as of June 28, 2025)**:
+
+| **Device/Service**                  | **On-Demand Pricing**                              | **Monthly Pricing** | **1-Year Upfront Pricing** | **Data Transfer IN** | **Data Transfer OUT** |
+|-------------------------------------|---------------------------------------------------|---------------------|----------------------------|----------------------|-----------------------|
+| Snowball Edge Storage Optimized 210TB | $1,800 (up to 100TB, 15 days) / $3,200 (101-210TB) + $250/day extra | $9,885              | $97,268, includes shipping | $0.00 per GB         | Varies by region, e.g., $0.05/GB in Asia Pacific (Seoul) |
+| Snowball Edge Compute Optimized with EC2 | Not specified for on-demand, contact AWS | $5,038 (104 vCPUs, 416 GB RAM) | $37,960                  | $0.00 per GB         | Varies by region      |
+| Amazon S3 Storage on Compute Device | N/A                                              | $0.01 per GB/month  | $0.12 per GB/year          | N/A                  | N/A                   |
 
 **Examples**:
-- **50 TB Transfer (Snowball Classic)**:
-  - Device: $2,500
-  - Data Transfer: 50,000 GB × $0.01 = $500
-  - Total: $3,000
-- **100 TB Transfer (Snowball Edge Storage Optimized)**:
-  - Device: $4,000
-  - Data Transfer: 100,000 GB × $0.01 = $1,000
-  - Total: $5,000
+- **50 TB Transfer**: Using Snowball Edge Storage Optimized 210TB on-demand:
+  - Job Fee: $1,800 (up to 100TB, includes 15 days).
+  - Data Transfer IN: $0.00.
+  - Total: $1,800 (assuming within 15 days, no extra days).
+- **100 TB Transfer**: Using Snowball Edge Storage Optimized 210TB on-demand:
+  - Job Fee: $1,800 (up to 100TB, includes 15 days).
+  - Data Transfer IN: $0.00.
+  - Total: $1,800 (assuming within 15 days, no extra days).
 
-Costs vary by region and usage, so consult AWS for precise estimates.
+
+---
+
+### Key Citations
+- [AWS Snowball Pricing Details and Service Fees](https://aws.amazon.com/snowball/pricing/)
+- [AWS S3 Pricing by Region for Data Transfer Out](https://aws.amazon.com/s3/pricing/)
+- [Snowball Shipping Guide and Rates](https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snowcone-shipping.html)
+- [EKS Anywhere Pricing and Subscription Details](https://aws.amazon.com/eks/eks-anywhere/pricing/)
 
 ## 7. Challenges and Limitations
 
