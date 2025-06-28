@@ -240,12 +240,6 @@ Given the user's request for a "combine way of data," I interpret this as provid
 
 ---
 
-### Key Citations
-- [AWS Snowball Pricing Details and Service Fees](https://aws.amazon.com/snowball/pricing/)
-- [AWS S3 Pricing by Region for Data Transfer Out](https://aws.amazon.com/s3/pricing/)
-- [Snowball Shipping Guide and Rates](https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snowcone-shipping.html)
-- [EKS Anywhere Pricing and Subscription Details](https://aws.amazon.com/eks/eks-anywhere/pricing/)
-
 ## 7. Challenges and Limitations
 
 - **Shipping Delays**: Physical shipping can take days to weeks, depending on location ([AWS Snowball Limitations](https://www.resilio.com/blog/aws-snowball-and-alternatives)).
@@ -523,5 +517,9 @@ AWS Snowball Edge is a powerful solution for edge computing and data transfer in
 - [AWS Snowball Edge for Telecom Use Cases](https://docs.aws.amazon.com/whitepapers/latest/ec2-networking-for-telecom/snowball.html)
 - [AWS Snowball Edge Workflow Guide](https://docs.aws.amazon.com/snowball/latest/developer-guide/how-it-works.html)
 - [AWS Snowball Edge Getting Started Guide](https://docs.aws.amazon.com/snowball/latest/developer-guide/getting-started.html)
+- [AWS Snowball Pricing Details and Service Fees](https://aws.amazon.com/snowball/pricing/)
+- [AWS S3 Pricing by Region for Data Transfer Out](https://aws.amazon.com/s3/pricing/)
+- [Snowball Shipping Guide and Rates](https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snowcone-shipping.html)
+- [EKS Anywhere Pricing and Subscription Details](https://aws.amazon.com/eks/eks-anywhere/pricing/)
   
 </details>
